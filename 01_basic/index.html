@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || Apply</title>
+</head>
+<body>
+    <!-- DOM is all about how apply javaScript in HTML -->
+    <!-- All html code convert into the tree like structure in browser called document -->
+    
+    <!-- ID -->
+    <p id="first"> <span>Hello</span> Priyanka</p>
+
+    <!-- Class -->
+    <ul>
+        <li class="tech">One</li>
+        <li class="tech">Two</li>
+        <li class="tech">Three</li>
+    </ul>
+
+    <!-- Tag Name -->
+    <h4>Apple</h4>
+    <h4>Mango</h4>
+    <h4>Banana</h4>
+    <h4>Orange</h4>
+    <h4>Pine Apple</h4>
+
+    <!-- Query Selector -->
+    <h3>Jalebi</h3>
+    <h3 class="costly">Burfi</h3>
+    <h3 id="cheap">Laddu</h3>
+
+    <script>
+        // ID
+        const myName = document.getElementById("first")
+        console.log(myName.innerHTML)
+
+        // Class
+        const myTech = document.getElementsByClassName("tech")
+        console.log(myTech[2].innerText)
+        myTech[2].innerText = "changeTheNumber"
+
+        // Tag Name
+        const myBasket = document.getElementsByTagName("h4")
+        console.log(myBasket)
+        myBasket[2].innerText = "Cherry" // Banana replace with Cherry
+        myBasket[2].style.color = "red"  // give the color of your text
+
+        // Query Selector
+        const mySweets = document.querySelector(".costly")
+        console.log(mySweets) //  <h3 class="costly">Burfi</h3> in browser
+
+        // document which change the CSS
+
+        // mySweets.className = "expensive" // <h3 class="expensive">Burfi</h3>
+
+        // mySweets.classList = "costly expensive premium" // <h3 class="costly expensive premium">Burfi</h3>
+
+        mySweets.setAttribute("title", "Indian Sweet")
+
+    </script>
+
+
+</body>
+</html>

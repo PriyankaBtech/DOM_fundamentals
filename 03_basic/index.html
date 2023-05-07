@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || EventListener</title>
+</head>
+<body>
+    <!-- Normal Html -->
+
+    <h1>Who invented the JavaScript?</h1>
+    <p id="inventor"></p>
+
+    <!-- button -->
+    <button onclick="greeting()" id="greet" >Say</button>
+    
+    <!-- JavaScript -->
+    <script>
+        // apply in entire web page
+        document.addEventListener("click", knowledge)
+        function knowledge() {
+            document.getElementById("inventor").innerText = "Brendan Eich"
+        }
+
+        // apply in particular area/button
+        function greeting(){
+            document.getElementById("greet").innerText = "Have a nice Day"
+            document.getElementById("greet").style.color = "purple"
+            document.getElementById("greet").style.backgroundColor = "pink"
+            document.getElementById("greet").style.padding = "16px"
+            document.getElementById("greet").style.border = "2px solid black"
+            document.getElementById("greet").style.fontSize = "25px"
+        }
+        
+    </script>
+    
+</body>
+</html>

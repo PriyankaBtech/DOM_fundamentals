@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || Create and Remove</title>
+</head>
+<body>
+    <!-- Normal HTML -->
+    <ul>
+        <li>Potato</li>
+        <li>Tomato</li>
+        <li>Onion</li>
+    </ul>
+    
+    <!-- JavaScript -->
+    <script>
+        // Create the name after click
+
+        // APPEND CHILD
+        const myName = document.createElement("h2")
+        myName.className = "name"
+        myName.textContent = "PRIYANKA"
+        myName.style.fontSize = "25px"
+        myName.style.color = "Green"
+        console.log(myName)
+        document.body.appendChild(myName)
+
+        // REMOVE CHILD
+        const myVeg = document.querySelector("ul")
+        console.log(myVeg)
+
+        const myAllVeg = document.querySelectorAll("li")
+        console.log(myAllVeg) // NodeList 
+
+        // apply loop => for of
+        for(vege of myAllVeg){
+            myVeg.removeChild(vege)
+        }
+
+    </script>
+    
+</body>
+</html>
